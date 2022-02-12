@@ -5,7 +5,7 @@ on:
         tags:
             - 'v*'
 
-jogs:
+jobs:
     run_on_push_tag:
         runs-on: ubuntu-latest
         steps:

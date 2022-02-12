@@ -1,0 +1,28 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "a javascript github action example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrozc90/github.git"
+  },
+  "keywords": [
+    "github",
+    "actions",
+    "workflows"
+  ],
+  "author": "pedrozc90",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedrozc90/github/issues"
+  },
+  "homepage": "https://github.com/pedrozc90/github#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  }
+}

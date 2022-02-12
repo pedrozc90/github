@@ -6,7 +6,7 @@ on:
             - 'v*'
 
 jogs:
-    tagginf:
+    run_on_push_tag:
         runs-on: ubuntu-latest
         steps:
             - run: echo "This job runs when a tag named like v1.0.0 is pushed."

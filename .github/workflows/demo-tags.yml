@@ -1,0 +1,35 @@
+name: Tag Action
+
+on:
+    push:
+        tags:
+            - 'v*'
+
+jogs:
+    tagginf:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This job runs when a tag named like v1.0.0 is pushed."
+
+            - run: echo "This job was automatically triggered by a ${{ github.event_name }} event on ${{ github.ref }}."
+            
+
+            - name: Checkout
+              uses: actions/checkout@v2
+
+            - name: List files in the repository
+              run: ls -alh ${{ github.workspace }}
+            
+            - name: Runner Information
+              run: echo "${{ toJSON(runner) }}"
+
+            - name: Job Information
+              run: echo "${{ toJSON(job) }}"
+
+            - name: Repository Information
+              run: echo "${{ toJSON(github) }}"
+
+            - name: Verify Git Version
+              run: git --version
+
+            - run: echo "This job's status is ${{ job.status }}." 

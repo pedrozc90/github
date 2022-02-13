@@ -1,0 +1,17 @@
+name: Manual Job
+
+on:  [ workflow_dispatch ]
+
+jobs:
+  example:
+    name: Example Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: List files in the repository
+        run: ls -alh ${{ github.workspace }}
+      
+      # - name: Greet
+      #   uses: .github/actions/demo

@@ -1,0 +1,25 @@
+name: Benchmark pullrequest and compare
+
+on:
+  pull_request:
+    branches:
+      - "master"
+
+jobs:
+  beenchmark:
+    name: Run Benchmark and Compare
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: List Files
+        run: ls -al ${{ github.workspace }}
+      
+      - name: Download benchmark artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: benchmark_results
+      
+      - name: List Files
+        run: ls -al ${{ github.workspace }}

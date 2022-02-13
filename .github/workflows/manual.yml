@@ -10,8 +10,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: List files in the repository
+      - name: List Repository Files
         run: ls -alh ${{ github.workspace }}
       
-      # - name: Greet
-      #   uses: .github/actions/demo
+      - name: Greet
+        uses: .github/actions/demo

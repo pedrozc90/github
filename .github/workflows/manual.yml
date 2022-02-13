@@ -14,11 +14,11 @@ jobs:
         run: ls -alh ${{ github.workspace }}
       
       - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
+        uses: ./.github/actions # Uses an action in the root directory
         id: hello
         with:
           who-to-greet: "Pedro"
-          
+
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"

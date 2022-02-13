@@ -14,4 +14,7 @@ jobs:
         run: ls -alh ${{ github.workspace }}
       
       - name: Greet
+        id: greet
         uses: .github/actions/demo
+        with:
+          who-to-greet: "Pedro"

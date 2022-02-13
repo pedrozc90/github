@@ -1,11 +1,11 @@
-name: Release
+name: Docker Action
 
 # manually triggered workflow
 on: workflow_dispatch
 
 jobs:
-    release_image:
-        name: Release docker image
+    docker_action:
+        name: Docker Action
         runs-on: ubuntu-latest
         steps:
             - name: Checkout

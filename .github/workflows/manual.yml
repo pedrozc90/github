@@ -1,27 +1,26 @@
-name: Manual
+name: Manual Job
 
-# manually triggered workflow
 on: workflow_dispatch
 
 jobs:
-    run_manually:
-        name: Manually Run Job
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
+  manual_job:
+    name: Runs Manually
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-            - name: List files in the repository
-              run: ls -alh ${{ github.workspace }}
-            
-            - name: Runner Information
-              run: echo "${{ toJSON(runner) }}"
+      - name: List files in the repository
+        run: ls -alh ${{ github.workspace }}
+      
+      - name: Runner Information
+        run: echo "${{ toJSON(runner) }}"
 
-            - name: Job Information
-              run: echo "${{ toJSON(job) }}"
+      - name: Job Information
+        run: echo "${{ toJSON(job) }}"
 
-            - name: Repository Information
-              run: echo "${{ toJSON(github) }}"
-            
-            - name: Greet
-              uses: .github/actions/demo
+      - name: Repository Information
+        run: echo "${{ toJSON(github) }}"
+      
+      - name: Greet
+        uses: .github/actions/demo

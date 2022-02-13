@@ -9,5 +9,5 @@ outputs:
     time:   # id outputs
         description: "The time we greeted you"
 runs:
-    using: "node16"
+    using: "node14"
     main: dist/index.js
